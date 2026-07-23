@@ -1,0 +1,15 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# node / react native (ileride melodex-ui için)
+node_modules/
+.expo/
+
+# os / editor
+.DS_Store
+.idea/
