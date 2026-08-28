@@ -46,13 +46,13 @@ melodex-api/
 
 ## Phases (Roadmap)
 
-### Phase 1 — Project skeleton and infrastructure [STARTING POINT]
+### Phase 1 — Project skeleton and infrastructure [DONE]
 Python 3.14 project with `uv init`, FastAPI + PostgreSQL brought up via Docker Compose, a minimal health-check endpoint, a multi-stage Dockerfile (uv-based, non-root user). Outcome: a skeleton that runs with `docker compose up` and responds on `/health`.
 
-### Phase 2 — Database layer
+### Phase 2 — Database layer [DONE]
 Async SQLAlchemy 2.0 engine/session setup, first models (User, Playlist, Track, TransferJob), migration management with Alembic. Reasoning for the async engine choice and the table design explained in detail.
 
-### Phase 3 — Spotify integration
+### Phase 3 — Spotify integration [DONE]
 OAuth flow with `spotipy`, encrypted storage of tokens (never on the client), endpoints to fetch the user's playlists.
 
 ### Phase 4 — YouTube Music integration
@@ -78,4 +78,4 @@ GitHub Actions test/lint/build pipeline, pushing Docker images to a registry, de
 
 ---
 
-**Current status:** Working on Phase 1 — project skeleton and Docker Compose setup.
+**Current status:** Phase 1, 2, and 3 complete. Starting Phase 4 — YouTube Music integration.
