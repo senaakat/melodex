@@ -55,8 +55,8 @@ Async SQLAlchemy 2.0 engine/session setup, first models (User, Playlist, Track, 
 ### Phase 3 — Spotify integration [DONE]
 OAuth flow with `spotipy`, encrypted storage of tokens (never on the client), endpoints to fetch the user's playlists.
 
-### Phase 4 — YouTube Music integration
-Authentication and search/add operations with `ytmusicapi`, the risks that come with an unofficial API and how they're mitigated.
+### Phase 4 — YouTube Music integration [DONE]
+Authentication and search/add operations with `ytmusicapi`, the risks that come with an unofficial API and how they're mitigated. Note: switched from OAuth (device flow) to browser-header authentication after hitting an open upstream bug in ytmusicapi's OAuth token handling (search requests returned HTTP 400). Browser auth credentials are valid ~2 years tied to the browser session and require manual regeneration if revoked.
 
 ### Phase 5 — Song matching engine
 Spotify ↔ YouTube Music song matching algorithm using `rapidfuzz`, a match confidence score, a user-confirmation flow for uncertain matches.
@@ -78,4 +78,4 @@ GitHub Actions test/lint/build pipeline, pushing Docker images to a registry, de
 
 ---
 
-**Current status:** Phase 1, 2, and 3 complete. Starting Phase 4 — YouTube Music integration.
+**Current status:** Phase 1–4 complete. Starting Phase 5 — song matching engine.

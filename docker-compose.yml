@@ -28,6 +28,7 @@ services:
         condition: service_healthy
     volumes:
       - ./melodex-api/app:/app/app
+      - ./melodex-api/secrets:/app/secrets:ro
 
 volumes:
   pgdata:

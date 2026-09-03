@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     spotify_client_secret: str
     spotify_redirect_uri: str
     token_encryption_key: str
+    ytmusic_oauth_path: str = "secrets/browser.json"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
